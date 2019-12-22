@@ -1,9 +1,8 @@
 package base
 
 import (
-	"infra/v1"
-
 	ut "github.com/go-playground/universal-translator"
+	"github.com/leiwenxuan/infra"
 
 	"github.com/go-playground/locales/zh"
 	"github.com/sirupsen/logrus"

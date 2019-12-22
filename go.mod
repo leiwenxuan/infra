@@ -1,4 +1,4 @@
-module infra/v1
+module github.com/leiwenxuan/infra
 
 go 1.13
 

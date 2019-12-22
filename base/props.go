@@ -1,8 +1,7 @@
 package base
 
 import (
-	"infra/v1"
-
+	"github.com/leiwenxuan/infra"
 	"github.com/tietang/props/ini"
 	"github.com/tietang/props/kvs"
 )

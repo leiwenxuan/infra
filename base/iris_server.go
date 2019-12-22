@@ -1,9 +1,9 @@
 package base
 
 import (
-	"infra/v1"
-	infra2 "infra/v1"
 	"time"
+
+	"github.com/leiwenxuan/infra"
 
 	"github.com/kataras/iris"
 	"github.com/kataras/iris/middleware/logger"
@@ -25,7 +25,7 @@ type IrisServerStarter struct {
 //	panic("implement me")
 //}
 
-func (i *IrisServerStarter) Setup(infra2.StarterContext) {
+func (i *IrisServerStarter) Setup(infra.StarterContext) {
 	panic("implement me")
 }
 
@@ -33,7 +33,7 @@ func (i *IrisServerStarter) Setup(infra2.StarterContext) {
 //	panic("implement me")
 //}
 
-func (i *IrisServerStarter) Stop(infra2.StarterContext) {
+func (i *IrisServerStarter) Stop(infra.StarterContext) {
 	panic("implement me")
 }
 
