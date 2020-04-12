@@ -2,25 +2,22 @@ package base
 
 import (
 	"github.com/leiwenxuan/infra"
-	"github.com/tietang/props/ini"
+	log "github.com/sirupsen/logrus"
 	"github.com/tietang/props/kvs"
 )
+
+var props kvs.ConfigSource
+
+func Props() kvs.ConfigSource {
+	Check(props)
+	return props
+}
 
 type PropsStarter struct {
 	infra.BaseStarter
 }
 
-var props kvs.ConfigSource
-
-func Props() kvs.ConfigSource {
-	return props
-}
-
 func (p *PropsStarter) Init(ctx infra.StarterContext) {
-	//file := kvs.GetCurrentFilePath("config.ini", 1)
-	props = ini.NewIniFileCompositeConfigSource("config.ini")
-}
-
-func (p *PropsStarter) StartBlocking() bool {
-	return false
+	props = ctx.Props()
+	log.Info("初始化配置.")
 }

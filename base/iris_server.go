@@ -3,17 +3,17 @@ package base
 import (
 	"time"
 
+	"github.com/kataras/iris/v12"
+	"github.com/kataras/iris/v12/middleware/logger"
+	irisrecover "github.com/kataras/iris/v12/middleware/recover"
 	"github.com/leiwenxuan/infra"
-
-	"github.com/kataras/iris"
-	"github.com/kataras/iris/middleware/logger"
-	irisrecover "github.com/kataras/iris/middleware/recover"
-	"github.com/sirupsen/logrus"
+	log "github.com/sirupsen/logrus"
 )
 
 var irisApplication *iris.Application
 
 func Iris() *iris.Application {
+	Check(irisApplication)
 	return irisApplication
 }
 
@@ -21,35 +21,26 @@ type IrisServerStarter struct {
 	infra.BaseStarter
 }
 
-//func (i *IrisServerStarter) Init(infra2.StarterContext) {
-//	panic("implement me")
-//}
-
-func (i *IrisServerStarter) Setup(infra.StarterContext) {
-	panic("implement me")
-}
-
-//func (i *IrisServerStarter) Start(infra2.StarterContext) {
-//	panic("implement me")
-//}
-
-func (i *IrisServerStarter) Stop(infra.StarterContext) {
-	panic("implement me")
-}
-
 func (i *IrisServerStarter) Init(ctx infra.StarterContext) {
 	//创建iris application实例
 	irisApplication = initIris()
 	//日志组件配置和扩展
 	logger := irisApplication.Logger()
-	logger.Install(logrus.StandardLogger())
+	logger.Install(log.StandardLogger())
+
+}
+
+func (i *IrisServerStarter) Setup(ctx infra.StarterContext) {
 
 }
 func (i *IrisServerStarter) Start(ctx infra.StarterContext) {
+	//和logrus日志级别保持一致
+	Iris().Logger().SetLevel(ctx.Props().GetDefault("log.level", "info"))
+
 	//把路由信息打印到控制台
 	routes := Iris().GetRoutes()
 	for _, r := range routes {
-		logrus.Info(r.Trace())
+		log.Info(r.Trace())
 	}
 	//启动iris
 	port := ctx.Props().GetDefault("app.server.port", "18080")
@@ -64,16 +55,19 @@ func initIris() *iris.Application {
 	app.Use(irisrecover.New())
 	// 主要中间件的配置:recover,日志输出中间件的自定义
 	cfg := logger.Config{
-		Status: true,
-		IP:     true,
-		Method: true,
-		Path:   true,
-		Query:  true,
+		Status:             true,
+		IP:                 true,
+		Method:             true,
+		Path:               true,
+		Query:              true,
+		Columns:            true,
+		MessageContextKeys: []string{"logger_message"},
+		MessageHeaderKeys:  []string{"User-Agent"},
 		LogFunc: func(now time.Time, latency time.Duration,
 			status, ip, method, path string,
 			message interface{},
 			headerMessage interface{}) {
-			app.Logger().Infof("| %s | %s | %s | %s | %s | %s | %s | %s",
+			app.Logger().Infof("| %s | %s | %s | %s | %s | %s | %+v | %+v",
 				now.Format("2006-01-02.15:04:05.000000"),
 				latency.String(), status, ip, method, path, headerMessage, message,
 			)

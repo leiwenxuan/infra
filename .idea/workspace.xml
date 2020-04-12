@@ -1,30 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="225e5545-08dd-4ca0-a405-a6c613838994" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/infra.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/infra.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/watcherTasks.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Upload.sh" beforeDir="false" afterPath="$PROJECT_DIR$/Upload.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/base/iris_server.go" beforeDir="false" afterPath="$PROJECT_DIR$/base/iris_server.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/base/log.go" beforeDir="false" afterPath="$PROJECT_DIR$/base/log.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/base/props.go" beforeDir="false" afterPath="$PROJECT_DIR$/base/props.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/base/validator.go" beforeDir="false" afterPath="$PROJECT_DIR$/base/validator.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/boot.go" beforeDir="false" afterPath="$PROJECT_DIR$/boot.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config.ini" beforeDir="false" afterPath="$PROJECT_DIR$/config.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/app.go" beforeDir="false" afterPath="$PROJECT_DIR$/example/app.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/config.ini" beforeDir="false" afterPath="$PROJECT_DIR$/example/config.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/v1.go" beforeDir="false" afterPath="$PROJECT_DIR$/example/v1.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/infra.2019122219.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/infra.2019122219.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/starer.go" beforeDir="false" afterPath="$PROJECT_DIR$/starer.go" afterDir="false" />
-    </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <list default="true" id="225e5545-08dd-4ca0-a405-a6c613838994" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -45,7 +22,14 @@
     <option name="indexEntireGoPath" value="false" />
   </component>
   <component name="ProjectId" id="1VKqMOPLfkiAIxGF1Mkn6zsE8jO" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="DefaultGoTemplateProperty" value="Go File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -54,7 +38,7 @@
     <property name="go.tried.to.enable.integration.vgo.integrator" value="true" />
     <property name="go.vendoring.notification.had.been.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="watcher.settings" />
+    <property name="settings.editor.selected.configurable" value="go.vgo" />
     <property name="two.files.diff.last.used.file" value="$PROJECT_DIR$/config.ini" />
   </component>
   <component name="RecentsManager">
@@ -64,18 +48,6 @@
     <key name="MoveFile.RECENT_KEYS">
       <recent name="F:\code\002Golang\awesomeProject\infra\base" />
     </key>
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
   </component>
   <component name="RunManager" selected="Go Build.go build v1.go">
     <configuration name="go build infra/v1/example" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
@@ -111,7 +83,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
@@ -119,7 +93,21 @@
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
-    <vendoring-mode>true</vendoring-mode>
+    <proxy>direct</proxy>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="552" y="179" key="#Go_Modules_(vgo)" timestamp="1586679656589">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="179" key="#Go_Modules_(vgo)/0.0.1920.1040@0.0.1920.1040" timestamp="1586679656589" />
+    <state x="552" y="178" key="#HTTP_Proxy" timestamp="1586679737024">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="178" key="#HTTP_Proxy/0.0.1920.1040@0.0.1920.1040" timestamp="1586679737024" />
+    <state x="461" y="162" key="SettingsEditor" timestamp="1586679899797">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="461" y="162" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1586679899797" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
